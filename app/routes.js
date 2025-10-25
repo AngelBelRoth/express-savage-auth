@@ -37,10 +37,14 @@ module.exports = function(app, passport, db) {
     })
 
     app.put('/messages', (req, res) => {
+      const thumb = Object.keys(req.body).includes('thumbUp')
+      const thumbValue = thumb ?
+      req.body.thumbUp + 1:
+      req.body.thumbDown - 1;
       db.collection('messages')
       .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
         $set: {
-          thumbUp:req.body.thumbUp + 1
+          thumbUp: thumbValue
         }
       }, {
         sort: {_id: -1},
