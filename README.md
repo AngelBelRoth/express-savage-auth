@@ -1,160 +1,70 @@
-# express-savage-auth
+# express-savage-auth  
+_A robust and extensible authentication boilerplate for Express.js apps_
 
-A robust and extensible authentication boilerplate for Express apps
+![Node.js](https://img.shields.io/badge/node-%3E%3D16-brightgreen?style=flat-square)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)
 
-Table of Contents
+---
 
-About
+## 📖 Table of Contents  
+- [About](#about)  
+- [Features](#features)  
+- [Getting Started](#getting-started)  
+  - [Prerequisites](#prerequisites)  
+  - [Installation](#installation)  
+  - [Configuration](#configuration)  
+  - [Usage](#usage)  
+- [Project Structure](#project-structure)  
+- [Authentication Flow](#authentication-flow)  
+- [Customization & Extensibility](#customization--extensibility)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)  
 
-Features
+---
 
-Getting Started
+## About  
+**express-savage-auth** is a modernized boilerplate for quickly adding **user authentication** and **session management** to your Express.js projects.  
 
-Prerequisites
+It’s built to be modular, extendable, and easy to customize — perfect for starting new projects that need secure, scalable login functionality.  
 
-Installation
+Originally inspired by a Scotch.io tutorial, this version has been **cleaned, structured, and upgraded** for today’s best practices.  
 
-Configuration
+> Ideal for: developers who want a solid Express auth base without reinventing the wheel.  
 
-Usage
+**Repository:** [github.com/AngelBelRoth/express-savage-auth](https://github.com/AngelBelRoth/express-savage-auth)
 
-Project Structure
+---
 
-Authentication Flow
+## ✨ Features  
+- 🔐 Local username/password authentication  
+- 💾 Session support with `express-session`  
+- 🧩 Modular file structure for clean scalability  
+- 🖥️ EJS templating and ready-to-use views  
+- ⚙️ Easy integration with Passport.js strategies (Local, OAuth, etc.)  
+- 🔄 Extendable to JWT, OAuth2, or API-based systems  
+- 🧱 Clear separation of app, config, routes, and views  
 
-Customization & Extensibility
+---
 
-Contributing
+## 🏁 Getting Started  
 
-License
+### Prerequisites  
+- [Node.js](https://nodejs.org/) v16+  
+- npm or yarn  
+- Optional: MongoDB (or another database) for persistent session storage  
 
-Contact
+### 💻 Installation  
+```bash
+# Clone the repository
+git clone https://github.com/AngelBelRoth/express-savage-auth.git
 
-About
+# Move into the project directory
+cd express-savage-auth
 
-Express-Savage-Auth is a boilerplate for adding user authentication and session management to an Express.js application. It builds on the fundamentals of local authentication, sessions, views, and a modular structure to help you get started quickly with a secure base.
+# Install dependencies
+npm install
 
-Originally modified from a tutorial by Scotch.io, this version has been cleaned up, modernized, and optimized for easier integration into production-ready apps. 
-GitHub
+# Start the development server
+npm run dev
 
-Features
-
-✅ Local username & password authentication
-
-✅ Session support with Express
-
-✅ Modular folder structure (app, config, views, public)
-
-✅ Easily extendable to OAuth, JWT, or other auth strategies
-
-✅ Built with JavaScript + EJS templating
-
-✅ Clear separation of concerns: routes, views, config
-
-Getting Started
-Prerequisites
-
-Node.js (version 16.x or higher recommended)
-
-npm or yarn
-
-(Optional) A database or persistent session store if you intend to go beyond in-memory session storage
-
-Installation
-git clone https://github.com/AngelBelRoth/express-savage-auth.git  
-cd express-savage-auth  
-npm install  
-
-Configuration
-
-Copy or rename config/sample.env (if provided) to .env
-
-Set your environment variables, e.g.:
-
-PORT=8080  
-SESSION_SECRET=your_super_secret_key  
-DB_URI=mongodb://localhost/your_db_name  
-
-
-If you add a database or session store, configure it in /config (e.g., config/database.js, config/passport.js)
-
-Usage
-npm start  
-
-
-Then open your browser and navigate to http://localhost:8080 (or whatever PORT you configured) to see the app in action. 
-GitHub
-
-Project Structure
-root/
-├─ app/
-│   ├─ controllers/
-│   ├─ models/
-│   ├─ routes/
-│   └─ views/
-├─ config/
-│   ├─ passport.js
-│   ├─ database.js
-│   └─ …
-├─ public/
-│   ├─ css/
-│   ├─ js/
-│   └─ images/
-├─ server.js
-├─ package.json
-└─ README.md
-
-
-This structure keeps your authentication logic, routing, views and public assets clearly separated and maintainable.
-
-Authentication Flow
-
-User hits the login route → enters credentials
-
-Credentials are validated via Passport (or your selected strategy)
-
-Successful login creates a session stored by Express
-
-User visits protected routes, session middleware verifies logged-in status
-
-Logout destroys session and redirects user
-
-(You can extend this flow with email verification, OAuth2, JWT tokens, etc.)
-
-Customization & Extensibility
-
-Want to swap in JWT instead of sessions? Replace the session middleware in server.js and adjust your auth strategy.
-
-Want to add social login (Google, Facebook, GitHub)? Expand config/passport.js with OAuth strategies.
-
-Want to change the templating engine? Replace EJS files in views/ and adjust the renderer in server.js.
-
-You can easily extract the auth logic as a module for reuse across projects.
-
-Contributing
-
-Contributions are welcome!
-
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request and describe your changes in detail
-
-Please ensure any new code maintains the project’s structure and includes appropriate documentation and tests where relevant.
-
-License
-
-This project is licensed under the MIT License — see the LICENSE
- file for details. 
-GitHub
-
-Contact
-
-Created by Angel Bel Roth
-
-Project Link: https://github.com/AngelBelRoth/express-savage-auth
