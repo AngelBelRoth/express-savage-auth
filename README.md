@@ -1,5 +1,5 @@
 # express-savage-auth  
-_A robust and extensible authentication boilerplate for Express.js apps_
+__A robust and extensible authentication messaging board for fans of 21 savage built with Express.js__
 
 ![Node.js](https://img.shields.io/badge/node-%3E%3D16-brightgreen?style=flat-square)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)
